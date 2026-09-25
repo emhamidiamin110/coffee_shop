@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "title": "Noor Coffee | Freshly Brewed, Warmly Served",
+    "description": "Noor Coffee — a place to pause, enjoy a freshly brewed cup, and take a quiet moment. Explore our menu, gallery, and contact info."
+  },
+  "nav": {
+    "brand": "Noor Coffee",
+    "home": "Home",
+    "menu": "Menu",
+    "about": "About",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "cta": "Book a Table"
+  },
+  "hero": {
+    "eyebrow": "Noor Coffee",
+    "title": "Every Cup, a Moment of Calm",
+    "subtitle": "Freshly roasted beans, skilled baristas, and a cozy space — Noor Coffee is where your day begins again.",
+    "primaryCta": "View Menu",
+    "secondaryCta": "Book a Table"
+  },
+  "about": {
+    "eyebrow": "Our Story",
+    "title": "From Bean to Cup, With Love",
+    "body": "Noor Coffee started in 2019 with a simple dream: a place where people could enjoy a truly great cup of coffee and step away from the noise of the day. Our beans are roasted weekly, and every drink is made with care and patience.",
+    "stat1Value": "7+",
+    "stat1Label": "Years of Experience",
+    "stat2Value": "50+",
+    "stat2Label": "Drinks on the Menu",
+    "stat3Value": "12k+",
+    "stat3Label": "Happy Customers"
+  },
+  "menu": {
+    "eyebrow": "Fan Favorites",
+    "title": "Most Loved at Noor Coffee",
+    "subtitle": "A few of the drinks and treats our customers can't get enough of.",
+    "viewAll": "View Full Menu",
+    "items": {
+      "espresso": { "name": "Espresso", "desc": "Arabica beans, balanced bitterness, rich crema" },
+      "latte": { "name": "Latte", "desc": "Espresso with velvety steamed milk" },
+      "cappuccino": { "name": "Cappuccino", "desc": "A classic balance of coffee, milk and foam" },
+      "coldbrew": { "name": "Cold Brew", "desc": "18-hour cold steep, smooth and naturally sweet" },
+      "croissant": { "name": "Butter Croissant", "desc": "Baked fresh every morning" },
+      "cheesecake": { "name": "Caramel Cheesecake", "desc": "Creamy and soft with homemade caramel sauce" }
+    }
+  },
+  "features": {
+    "eyebrow": "Why Noor Coffee?",
+    "title": "A Different Experience Every Visit",
+    "items": {
+      "beans": { "title": "Freshly Roasted Beans", "desc": "Roasted weekly for consistent, vibrant flavor" },
+      "baristas": { "title": "Expert Baristas", "desc": "Years of craft behind every pour" },
+      "cozy": { "title": "Cozy Atmosphere", "desc": "A calm space to work, read, or chat" },
+      "wifi": { "title": "Free Wi-Fi", "desc": "Fast internet for all our guests" }
+    }
+  },
+  "gallery": {
+    "eyebrow": "A Look Inside",
+    "title": "Gallery"
+  },
+  "testimonials": {
+    "eyebrow": "Customer Reviews",
+    "title": "What People Say",
+    "items": [
+      { "name": "Sara Ahmadi", "role": "Regular Customer", "quote": "The best latte in town. The atmosphere is so relaxing too." },
+      { "name": "Ali Rezaei", "role": "Graphic Designer", "quote": "I work here every morning — great Wi-Fi and even better coffee." },
+      { "name": "Maryam Karimi", "role": "Student", "quote": "The staff are so kind, and don't skip the cheesecake!" }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Find Us",
+    "title": "Visit Noor Coffee",
+    "addressLabel": "Address",
+    "address": "120 Valiasr St, near Vanak Sq, Tehran",
+    "hoursLabel": "Hours",
+    "hours": "Every day, 8 AM – 11 PM",
+    "phoneLabel": "Phone",
+    "phone": "+98 21 1234 5678"
+  },
+  "footer": {
+    "tagline": "Every cup, a moment of calm.",
+    "linksTitle": "Quick Links",
+    "socialTitle": "Follow Us",
+    "rights": "© All rights reserved to Noor Coffee."
+  }
+}

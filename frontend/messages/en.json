@@ -35,14 +35,8 @@
     "title": "Most Loved at Noor Coffee",
     "subtitle": "A few of the drinks and treats our customers can't get enough of.",
     "viewAll": "View Full Menu",
-    "items": {
-      "espresso": { "name": "Espresso", "desc": "Arabica beans, balanced bitterness, rich crema" },
-      "latte": { "name": "Latte", "desc": "Espresso with velvety steamed milk" },
-      "cappuccino": { "name": "Cappuccino", "desc": "A classic balance of coffee, milk and foam" },
-      "coldbrew": { "name": "Cold Brew", "desc": "18-hour cold steep, smooth and naturally sweet" },
-      "croissant": { "name": "Butter Croissant", "desc": "Baked fresh every morning" },
-      "cheesecake": { "name": "Caramel Cheesecake", "desc": "Creamy and soft with homemade caramel sauce" }
-    }
+    "currency": "Toman",
+    "empty": "No menu items yet. Start the backend so items can load here."
   },
   "features": {
     "eyebrow": "Why Noor Coffee?",

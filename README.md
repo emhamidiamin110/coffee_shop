@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# کافه نور (Noor Coffee)
 
-## Getting Started
+یک پروژه‌ی مونورپو برای وب‌سایت کافی‌شاپ، شامل فرانت‌اند و بک‌اند:
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+coffee_shop/
+├── frontend/    # Next.js + TypeScript + Tailwind + next-intl (fa/en)
+├── backend/     # ASP.NET Core (.NET 10) + EF Core + PostgreSQL, Clean Architecture
+└── docker-compose.yml
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## اجرای همه‌چیز با Docker (پیشنهادی)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+نیاز: [Docker](https://www.docker.com/) و Docker Compose.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+docker compose up --build
+```
 
-## Learn More
+سرویس‌هایی که بالا میان:
 
-To learn more about Next.js, take a look at the following resources:
+| سرویس     | آدرس                              | توضیح                          |
+|-----------|-----------------------------------|---------------------------------|
+| frontend  | http://localhost:3000             | صفحه‌ی سایت (Next.js dev server)|
+| backend   | http://localhost:5080/api/menuitems | REST API (.NET)              |
+| postgres  | localhost:5432                    | دیتابیس PostgreSQL              |
+| pgadmin   | http://localhost:5050             | مدیریت گرافیکی دیتابیس         |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+اطلاعات ورود pgAdmin: `admin@coffeeshop.local` / `admin` — بعد از ورود یک Server جدید با Host `postgres`، Port `5432`، User `postgres`، Password `postgres` اضافه کن.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+برای توقف:
 
-## Deploy on Vercel
+```bash
+docker compose down
+# یا برای پاک کردن دیتای دیتابیس هم:
+docker compose down -v
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## اجرای جدا (بدون Docker)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- فرانت‌اند: به [`frontend/README.md`](frontend/README.md) نگاه کن.
+- بک‌اند: به [`backend/README.md`](backend/README.md) نگاه کن.
+
+## معماری بک‌اند
+
+بک‌اند با **Clean Architecture** نوشته شده (چهار لایه‌ی مجزا در `backend/src/`):
+
+- `CoffeeShop.Domain` — Entity ها (بدون وابستگی به چیز دیگه‌ای)
+- `CoffeeShop.Application` — DTO ها، اینترفیس‌ها، منطق کاربردی (Service ها)
+- `CoffeeShop.Infrastructure` — پیاده‌سازی EF Core / PostgreSQL
+- `CoffeeShop.Api` — Controller ها و `Program.cs` (نقطه‌ی ورود)
+
+جهت وابستگی همیشه به‌سمت `Domain` هست: `Api → Infrastructure/Application → Application → Domain`.

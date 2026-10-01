@@ -1,29 +1,33 @@
 import { useTranslations } from "next-intl";
+import {
+  Coffee,
+  Armchair,
+  Bread,
+  CoffeeBean,
+  Cake,
+  Leaf,
+} from "@phosphor-icons/react/dist/ssr";
+import type { Icon } from "@phosphor-icons/react";
 
-const GALLERY_ITEMS = ["☕", "🛋️", "🥐", "🌱", "🍰", "🪴"];
+const GALLERY_ICONS: Icon[] = [Coffee, Armchair, Bread, CoffeeBean, Cake, Leaf];
 
 export default function Gallery() {
   const t = useTranslations("gallery");
 
   return (
-    <section id="gallery" className="bg-cream-100/60 py-20">
+    <section id="gallery" className="border-t border-line bg-ink-raised/40 py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="mx-auto max-w-2xl text-center">
-          <span className="text-sm font-semibold uppercase tracking-wide text-gold-600">
-            {t("eyebrow")}
-          </span>
-          <h2 className="mt-2 text-3xl font-bold text-coffee-900 sm:text-4xl">
-            {t("title")}
-          </h2>
-        </div>
+        <h2 className="max-w-md text-3xl font-bold text-tan sm:text-4xl">
+          {t("title")}
+        </h2>
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3">
-          {GALLERY_ITEMS.map((icon, i) => (
+          {GALLERY_ICONS.map((GalleryIcon, i) => (
             <div
               key={i}
-              className="flex aspect-square items-center justify-center rounded-2xl bg-linear-to-br from-coffee-600 to-coffee-900 text-5xl text-cream shadow-sm transition-transform hover:scale-[1.03]"
+              className="flex aspect-square items-center justify-center rounded-2xl border border-line bg-ink transition-colors hover:border-line-strong"
             >
-              {icon}
+              <GalleryIcon weight="duotone" className="h-10 w-10 text-ember" />
             </div>
           ))}
         </div>

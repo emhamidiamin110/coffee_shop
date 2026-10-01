@@ -11,7 +11,7 @@ public class MenuItem
     public string DescriptionEn { get; set; } = string.Empty;
     public decimal PriceToman { get; set; }
     public MenuCategory Category { get; set; }
-    public string Icon { get; set; } = "☕";
+    public string Icon { get; set; } = "coffee";
     public bool IsFeatured { get; set; }
     public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 }

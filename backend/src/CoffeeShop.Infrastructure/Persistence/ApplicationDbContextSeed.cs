@@ -29,7 +29,7 @@ public static class ApplicationDbContextSeed
                 DescriptionEn = "Arabica beans, balanced bitterness, rich crema",
                 PriceToman = 45000,
                 Category = MenuCategory.HotDrinks,
-                Icon = "☕",
+                Icon = "coffee",
                 IsFeatured = true,
             },
             new MenuItem
@@ -41,7 +41,7 @@ public static class ApplicationDbContextSeed
                 DescriptionEn = "Espresso with velvety steamed milk",
                 PriceToman = 60000,
                 Category = MenuCategory.HotDrinks,
-                Icon = "🥛",
+                Icon = "coffee",
                 IsFeatured = true,
             },
             new MenuItem
@@ -53,7 +53,7 @@ public static class ApplicationDbContextSeed
                 DescriptionEn = "A classic balance of coffee, milk and foam",
                 PriceToman = 55000,
                 Category = MenuCategory.HotDrinks,
-                Icon = "🍮",
+                Icon = "coffee",
                 IsFeatured = true,
             },
             new MenuItem
@@ -65,7 +65,7 @@ public static class ApplicationDbContextSeed
                 DescriptionEn = "18-hour cold steep, smooth and naturally sweet",
                 PriceToman = 65000,
                 Category = MenuCategory.ColdDrinks,
-                Icon = "🧊",
+                Icon = "snowflake",
                 IsFeatured = true,
             },
             new MenuItem
@@ -77,7 +77,7 @@ public static class ApplicationDbContextSeed
                 DescriptionEn = "Baked fresh every morning",
                 PriceToman = 40000,
                 Category = MenuCategory.Pastries,
-                Icon = "🥐",
+                Icon = "bread",
                 IsFeatured = true,
             },
             new MenuItem
@@ -89,7 +89,7 @@ public static class ApplicationDbContextSeed
                 DescriptionEn = "Creamy and soft with homemade caramel sauce",
                 PriceToman = 75000,
                 Category = MenuCategory.Desserts,
-                Icon = "🍰",
+                Icon = "cake",
                 IsFeatured = true,
             }
         );

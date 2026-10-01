@@ -1,42 +1,43 @@
 @import "tailwindcss";
 
+/*
+  "Black & Tan" — deliberately not the warm-cream/clay/espresso palette that
+  every AI-generated "cozy artisan" brief defaults to. True near-black ground,
+  warm tan ink, and a single saturated ember accent reserved for action.
+*/
 :root {
-  --color-cream: #faf4ea;
-  --color-cream-100: #f3e7d3;
-  --color-cream-200: #ecdcbf;
-  --color-coffee-900: #2c1a10;
-  --color-coffee-800: #3a2415;
-  --color-coffee-700: #4a2f1c;
-  --color-coffee-600: #5e3b23;
-  --color-coffee-500: #7a4d2e;
-  --color-gold-600: #a9762f;
-  --color-gold-500: #c8963e;
-  --color-gold-400: #dcb571;
-  --color-gold-200: #eeddb9;
+  --color-ink: #0c0b0a;
+  --color-ink-raised: #18140f;
+  --color-ink-raised-2: #221b13;
+  --color-line: rgba(236, 225, 201, 0.12);
+  --color-line-strong: rgba(236, 225, 201, 0.22);
+  --color-tan: #ece1c8;
+  --color-tan-dim: #a99d84;
+  --color-tan-faint: #6f6554;
+  --color-ember: #ff6a33;
+  --color-ember-dim: #e2541f;
 }
 
 @theme inline {
-  --color-cream: var(--color-cream);
-  --color-cream-100: var(--color-cream-100);
-  --color-cream-200: var(--color-cream-200);
-  --color-coffee-900: var(--color-coffee-900);
-  --color-coffee-800: var(--color-coffee-800);
-  --color-coffee-700: var(--color-coffee-700);
-  --color-coffee-600: var(--color-coffee-600);
-  --color-coffee-500: var(--color-coffee-500);
-  --color-gold-600: var(--color-gold-600);
-  --color-gold-500: var(--color-gold-500);
-  --color-gold-400: var(--color-gold-400);
-  --color-gold-200: var(--color-gold-200);
+  --color-ink: var(--color-ink);
+  --color-ink-raised: var(--color-ink-raised);
+  --color-ink-raised-2: var(--color-ink-raised-2);
+  --color-line: var(--color-line);
+  --color-line-strong: var(--color-line-strong);
+  --color-tan: var(--color-tan);
+  --color-tan-dim: var(--color-tan-dim);
+  --color-tan-faint: var(--color-tan-faint);
+  --color-ember: var(--color-ember);
+  --color-ember-dim: var(--color-ember-dim);
   --font-sans: var(--font-vazirmatn);
 }
 
 body {
-  background: var(--color-cream);
-  color: var(--color-coffee-900);
+  background: var(--color-ink);
+  color: var(--color-tan);
 }
 
 ::selection {
-  background: var(--color-gold-400);
-  color: var(--color-coffee-900);
+  background: var(--color-ember);
+  color: var(--color-ink);
 }

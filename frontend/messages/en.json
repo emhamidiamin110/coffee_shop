@@ -20,7 +20,6 @@
     "secondaryCta": "Book a Table"
   },
   "about": {
-    "eyebrow": "Our Story",
     "title": "From Bean to Cup, With Love",
     "body": "Noor Coffee started in 2019 with a simple dream: a place where people could enjoy a truly great cup of coffee and step away from the noise of the day. Our beans are roasted weekly, and every drink is made with care and patience.",
     "stat1Value": "7+",
@@ -39,7 +38,6 @@
     "empty": "No menu items yet. Start the backend so items can load here."
   },
   "features": {
-    "eyebrow": "Why Noor Coffee?",
     "title": "A Different Experience Every Visit",
     "items": {
       "beans": { "title": "Freshly Roasted Beans", "desc": "Roasted weekly for consistent, vibrant flavor" },
@@ -49,11 +47,9 @@
     }
   },
   "gallery": {
-    "eyebrow": "A Look Inside",
     "title": "Gallery"
   },
   "testimonials": {
-    "eyebrow": "Customer Reviews",
     "title": "What People Say",
     "items": [
       { "name": "Sara Ahmadi", "role": "Regular Customer", "quote": "The best latte in town. The atmosphere is so relaxing too." },

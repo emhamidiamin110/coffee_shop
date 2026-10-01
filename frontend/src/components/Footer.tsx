@@ -1,4 +1,11 @@
 import { useTranslations } from "next-intl";
+import {
+  Coffee,
+  InstagramLogo,
+  TelegramLogo,
+  WhatsappLogo,
+} from "@phosphor-icons/react/dist/ssr";
+import type { Icon } from "@phosphor-icons/react";
 
 export default function Footer() {
   const nav = useTranslations("nav");
@@ -11,31 +18,31 @@ export default function Footer() {
     { href: "#contact", label: nav("contact") },
   ];
 
-  const socials = ["Instagram", "Telegram", "WhatsApp"];
+  const socials: { name: string; icon: Icon }[] = [
+    { name: "Instagram", icon: InstagramLogo },
+    { name: "Telegram", icon: TelegramLogo },
+    { name: "WhatsApp", icon: WhatsappLogo },
+  ];
 
   return (
-    <footer className="border-t border-coffee-700/10 bg-cream-100/60">
+    <footer className="border-t border-line">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
           <span className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-full bg-coffee-800 text-cream">
-              ☕
-            </span>
-            <span className="text-lg font-bold text-coffee-900">
-              {nav("brand")}
-            </span>
+            <Coffee weight="duotone" className="h-6 w-6 text-ember" />
+            <span className="text-lg font-bold text-tan">{nav("brand")}</span>
           </span>
-          <p className="mt-3 text-sm text-coffee-700">{t("tagline")}</p>
+          <p className="mt-3 text-sm text-tan-dim">{t("tagline")}</p>
         </div>
 
         <div>
-          <h3 className="font-bold text-coffee-900">{t("linksTitle")}</h3>
+          <h3 className="font-bold text-tan">{t("linksTitle")}</h3>
           <ul className="mt-3 space-y-2">
             {links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-sm text-coffee-700 hover:text-coffee-900"
+                  className="text-sm text-tan-dim hover:text-tan"
                 >
                   {link.label}
                 </a>
@@ -45,15 +52,16 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="font-bold text-coffee-900">{t("socialTitle")}</h3>
-          <ul className="mt-3 space-y-2">
+          <h3 className="font-bold text-tan">{t("socialTitle")}</h3>
+          <ul className="mt-3 flex gap-3">
             {socials.map((social) => (
-              <li key={social}>
+              <li key={social.name}>
                 <a
                   href="#"
-                  className="text-sm text-coffee-700 hover:text-coffee-900"
+                  aria-label={social.name}
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-tan-dim transition-colors hover:border-line-strong hover:text-tan"
                 >
-                  {social}
+                  <social.icon weight="bold" className="h-4 w-4" />
                 </a>
               </li>
             ))}
@@ -61,7 +69,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-coffee-700/10 py-6 text-center text-sm text-coffee-600">
+      <div className="border-t border-line py-6 text-center text-sm text-tan-faint">
         {t("rights")}
       </div>
     </footer>

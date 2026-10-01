@@ -10,15 +10,15 @@ export default function LocaleSwitcher() {
   const router = useRouter();
 
   return (
-    <div className="flex items-center gap-1 rounded-full border border-coffee-700/20 bg-cream-100 p-1 text-sm">
+    <div className="flex items-center gap-1 rounded-full border border-line p-1 text-sm">
       {routing.locales.map((loc) => (
         <button
           key={loc}
           onClick={() => router.replace(pathname, { locale: loc })}
           className={`rounded-full px-3 py-1 transition-colors cursor-pointer ${
             locale === loc
-              ? "bg-coffee-800 text-cream"
-              : "text-coffee-700 hover:bg-cream-200"
+              ? "bg-ember text-ink"
+              : "text-tan-dim hover:text-tan"
           }`}
           aria-current={locale === loc}
         >
